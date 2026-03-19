@@ -2,7 +2,7 @@
 <html>
 <head>
 
-<title>Mans datorikas portfolio</title>
+<title>Laika plānošanas lietotnes</title>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,3 +10,128 @@
 <link rel="stylesheet" href="style.css" type="text/css"/>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+</head>
+<body>
+  <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding"
+  style="z-index:3;width:300px;font-weight:bold;" id="mySidebar">
+
+  <br>
+
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-button w3-hide-large w3-display-topleft"
+  style="width:100%;font-size:22px">Close Menu</a>
+
+  <div class="w3-container">
+  <h3 class="w3-padding-64"><b>Portfolio<br>Datorikas</b></h3>
+  </div>
+
+  <div class="w3-bar-block">
+  <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
+  <a href="index.html#rgraf" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Rastrgrafika: Gimp</a>
+  <a href="index.html#vgarf" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Vektorgrafika: Inkscape</a>
+  <a href="index.html#video" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Video: Clipchamp</a>
+  <a href="index.html#word" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Word</a>
+  <a href="index.html#exce" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Excel</a>
+
+  </div>
+
+  </nav>
+
+  <!-- Top menu for small screens -->
+  <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+
+  <a href="javascript:void(0)"
+  class="w3-button w3-red w3-margin-right"
+  onclick="w3_open()">☰</a>
+
+  <span>Portfolio Datorikas</span>
+
+  </header>
+
+  <!-- Overlay -->
+  <div class="w3-overlay w3-hide-large"
+  onclick="w3_close()"
+  style="cursor:pointer"
+  title="close side menu"
+  id="myOverlay"></div>
+
+    <script>
+
+    function w3_open() {
+
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+
+    }
+
+    function w3_close() {
+
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+
+    }
+
+    </script>
+    <main class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+
+  <h1 class="w3-jumbo"><b>Laika plānošanas</b></h1>
+  <h1 class="w3-xxxlarge w3-text-red"><b>lietotnes</b></h1>
+
+  <hr style="width:50px;border:5px solid red" class="w3-round">
+
+  </div>
+      <h1>Laika plānošanas lietotnes:</h1>
+  <ul>
+  <li><h2>Lietotne: TickTick</h2>
+  <h3>TickTick piedāvā plašu funkciju klāstu, kas ļauj efektīvi pārvaldīt darāmos uzdevumus. Bezmaksas versijā iespējams veidot uzdevumus un saņemt atgādinājumus. Premium versijā — pielāgotas at filtriem, veidnes, uzdevumu pievienošana tieši no telefona bloķēšanas ekrāna. Tāpat atgādinājumi pēc atrašanās vietas, interaktīvs kalendārs, uzdevumu skatījumi kā saraksts, Kanban, laika līnija.</h3></li>
+  <li><h2>Lietotne: Toggl Track</h2>
+  <h3>Toggl Track izceļas ar to, ka viegli ļauj pievienot laika blokus konkrētiem uzdevumiem un projektiem, bez pārlieku sarežģījumiem, un pēc tam sniedz detalizētus pārskatus par to, kā laiks tiek sadalīts. Viss tiek sinhronizēts starp ierīcēm, tāpēc var pāriet no telefona uz datoru bez traucējumiem.</h3></li>
+  <li><h2>Lietotnes: Motion, Akiflow, Sunsama</h2>
+  <h3>Motion, Akiflow un Sunsama ir dienas plānošanas lietotnes, kas ir veidotas profesionālam lietojumam, ar akcentu uz laika bloķēšanu („time blocking”). Motion automātiski pārcels uzdevumus uz nākamo dienu vai nākamo brīdi, kad būs pieejams, ja tie netiks izpildīti laikā.
+</h3></li>
+  <li><h2>Lietotne: Clockify</h2>
+  <h3>Clockify ir lietotne darba stundu izsekošanai un laika pārvaldībai, kas ļauj uzlabot darba rutīnu, sniedzot datus par to, kā tiek pavadīts laiks dažādās aktivitātēs.</h3></li>
+</ul>
+      <img
+      src=""
+      alt="Efektīva laika plānošana plakāts"
+      width="600"
+      height="400">
+      
+    <h1>Vispārīgas funkcijas / izvērtēšanas kritēriji</h1>
+      <h3>Kad izvēlas laika pārvaldības rīku, svarīgi ir izvērtēt, kādas funkcionalitātes vislabāk atbilst esošajām darba plūsmām. Piemēram, vai vajadzīga robusta uzdevumu pārvaldība ar prioritātēm un termiņiem? Vai komandas darbs, projektu laika līnijas, budžeta pārskati?</h3>
+      <h1>Laika pārvaldības programmatūra</h1>
+      <h3>Laika pārvaldības programmatūra digitālajā formā ļauj centralizēt plānošanu — piešķirt uzdevumus, termiņus, atgādinājumus, sekot progresam ar kontrolsarakstiem, Gantt diagrammām, Kanban skatiem utt.</h3>
+      <h1>Avoti</h1>
+      <ul>
+        <li>
+          <a href="https://www.techradar.com/reviews/ticktick" target="_blank">
+            TickTick Review
+          </a>
+        </li>
+        <li>
+          <a href="https://www.wired.com/story/best-time-management-apps/" target="_blank">
+            Wired Time Management Apps
+          </a>
+        </li>
+        <li>
+          <a href="https://clockify.me/blog/apps-tools/best-time-management-apps/" target="_blank">
+            Clockify Apps
+          </a>
+        </li>
+        <li>
+          <a href="https://www.atlassian.com/work-management/project-management/time-management-tools" target="_blank">
+            Atlassian Tools
+          </a>
+        </li>
+        <li>
+          <a href="https://www.proprofsproject.com/blog/best-time-management-software/" target="_blank">
+            ProProfs Software
+          </a>
+        </li>
+      </ul>
+</body>
+</html>
