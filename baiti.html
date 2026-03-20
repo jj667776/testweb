@@ -1,16 +1,56 @@
-!DOCTYPE html>
-<html>
+
+<!DOCTYPE html>
+<html lang="lv">
 <head>
     <meta charset="UTF-8">
-    <title>baiti</title>
-    <link href="css/stils.css" rel="stylesheet" type="text/css">
+    <title>Datu apjoma aprēķins</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        .form-container { margin: 20px; border: 1px solid #ccc; padding: 15px; width: fit-content; }
+        input, input[type="number"] { width: 300px; display: block; margin-bottom: 5px; }
+        .inline-block { display: inline; width: auto; }
+        label { margin-right: 10px; }
+    </style>
 </head>
 <body>
-    <h1>APrēķināt cik daudz informācijas var lejupielādēt</h1>
-    <div><input type="text" name="sek">sekundēs</div>
-    <input type="checkbox" id="KiB" name="kafija" value="1,0240">
-    <label for="KiB">KiB</label><br>
-    <input type="checkbox" id="KB"  name="KB" value="1,000">
-    <label for="KB">KB</label><br>
+    <div class="form-container">
+        <p>Aprēķināt cik daudz informācijas var lejupielādēt</p>
+        <input type="number" id="sekundes" placeholder="Ievadiet sekundes"> 
+        <span>sekundēs, ja interneta ātrums ir 25 Mbps</span>
+        <input type="text" id="atbilde" readonly>
+
+        <input type="radio" name="unit" id="kib" onclick="rekinat()"> 
+        <label for="kib">KiB</label>
+
+        <input type="radio" name="unit" id="kb" onclick="rekinat()"> 
+        <label for="kb">KB</label>
+    </div>
+    <script>  
+       const lauksSekundes = document.getElementById('sekundes');
+        const lauksAtbilde = document.getElementById('atbilde');
+        const radioKiB = document.getElementById('kib');
+        const radioKB = document.getElementById('kb');
+     
+        function rekinat() {
+            const s = parseFloat(lauksSekundes.value);
+            if (isNaN(s)) return;
+            const kopējieBiti = s * 25000000;
+            const kopējieBaiti = kopējieBiti / 8;
+            if (radioKB.checked) {
+                lauksAtbilde.value = kopējieBaiti / 1000;
+            } else if (radioKiB.checked) {
+                lauksAtbilde.value = kopējieBaiti / 1024;
+            }
+        }
+
+        lauksSekundes.onfocus = function() {
+            lauksSekundes.value = "";
+            lauksAtbilde.value = "";
+            radioKiB.checked = false;
+            radioKB.checked = false;
+        };
+    </script>
+
 </body>
 </html>
+
